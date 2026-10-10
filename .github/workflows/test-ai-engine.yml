@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install API test dependencies
+        working-directory: ai_engine
+        run: python -m pip install -r requirements.txt
       - name: Run unit tests
         working-directory: ai_engine
         run: python -m unittest -v
