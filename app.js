@@ -1356,4 +1356,100 @@ if($('dealRuleAllBtn')){
   syncDealRuleAllButton();
 }
 
-void bootSharedData();
+
+// Supabase Auth session gate. Account provisioning remains administrator-controlled.
+let memberSession=null;
+let memberAuthBooted=false;
+function setAuthGate(visible){
+  document.body.classList.toggle('auth-required',visible);
+  const gate=$('authGate');
+  if(gate)gate.setAttribute('aria-hidden',visible?'false':'true');
+}
+function authMessage(message){
+  const el=$('authError');
+  if(el)el.textContent=message||'';
+}
+async function startMemberSession(session){
+  if(!session||memberAuthBooted)return;
+  memberSession=session;
+  memberAuthBooted=true;
+  setAuthGate(false);
+  authMessage('');
+  if($('logoutBtn'))$('logoutBtn').classList.remove('hidden');
+  await bootSharedData();
+}
+async function endMemberSession(){
+  memberSession=null;
+  memberAuthBooted=false;
+  state=structuredClone(defaultState);
+  lastSyncedState=structuredClone(defaultState);
+  lastSyncedRevision=0;
+  setAuthGate(true);
+  if($('logoutBtn'))$('logoutBtn').classList.add('hidden');
+  if($('authPassword'))$('authPassword').value='';
+  authMessage('');
+}
+if($('authForm')){
+  $('authForm').addEventListener('submit',async event=>{
+    event.preventDefault();
+    if(!sbClient){authMessage('Supabaseの設定がありません。管理者に連絡してください。');return;}
+    const submit=$('authSubmit');
+    submit.disabled=true;
+    submit.textContent='ログイン中…';
+    authMessage('');
+    try{
+      const {data,error}=await sbClient.auth.signInWithPassword({
+        email:$('authEmail').value.trim(),
+        password:$('authPassword').value
+      });
+      if(error)throw error;
+      if(!data.session)throw new Error('ログインセッションを確認できませんでした。');
+      await startMemberSession(data.session);
+    }catch(error){
+      console.error(error);
+      authMessage('ログインできませんでした。メールアドレスとパスワードを確認してください。');
+    }finally{
+      submit.disabled=false;
+      submit.textContent='ログイン';
+    }
+  });
+}
+if($('logoutBtn')){
+  $('logoutBtn').classList.add('hidden');
+  $('logoutBtn').addEventListener('click',async()=>{
+    if(!sbClient)return;
+    $('logoutBtn').disabled=true;
+    try{
+      const {error}=await sbClient.auth.signOut();
+      if(error)throw error;
+      await endMemberSession();
+    }catch(error){console.error(error);toast('ログアウトに失敗しました');}
+    finally{$('logoutBtn').disabled=false;}
+  });
+}
+async function initializeMemberAuth(){
+  if(!sbClient){
+    setAuthGate(true);
+    authMessage('Supabaseの設定がありません。管理者に連絡してください。');
+    return;
+  }
+  setAuthGate(true);
+  try{
+    const {data,error}=await sbClient.auth.getSession();
+    if(error)throw error;
+    if(data.session)await startMemberSession(data.session);
+  }catch(error){
+    console.error(error);
+    authMessage('ログイン状態を確認できませんでした。通信を確認して再読み込みしてください。');
+  }
+  sbClient.auth.onAuthStateChange((event,session)=>{
+    if(event==='SIGNED_OUT'){
+      void endMemberSession();
+    }else if(event==='SIGNED_IN'&&session&&!memberAuthBooted){
+      // Supabase may emit this after an explicit login; defer to avoid running
+      // application boot inside the auth callback's lock.
+      setTimeout(()=>void startMemberSession(session),0);
+    }
+  });
+}
+void initializeMemberAuth();
