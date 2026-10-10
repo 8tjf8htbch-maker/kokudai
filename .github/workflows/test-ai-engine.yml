@@ -8,9 +8,6 @@ on:
       - "local-analysis.test.js"
       - "extensions.js"
       - "index.html"
-      - "local-analysis.js"
-      - "extensions.js"
-      - "index.html"
       - ".github/workflows/test-ai-engine.yml"
   pull_request:
     paths:
