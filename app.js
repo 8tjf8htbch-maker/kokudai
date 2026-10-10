@@ -1374,6 +1374,43 @@ function authMessage(message){
 async function startMemberSession(session){
   if(!session||memberAuthBooted)return;
   memberSession=session;
+  if(!sbClient){setAuthGate(true);authMessage('Supabaseの設定がありません。');return;}
+  // A valid Auth account is not sufficient by itself: it must also be provisioned
+  // as an active circle member by a trusted administrator.
+  try{
+    const {data:profile,error:profileError}=await sbClient
+      .from('member_profiles')
+      .select('user_id,display_name,active')
+      .eq('user_id',session.user.id)
+      .maybeSingle();
+    if(profileError)throw profileError;
+    if(!profile||profile.active!==true){
+      await sbClient.auth.signOut();
+      memberSession=null;
+      setAuthGate(true);
+      authMessage('このアカウントは國大練習のメンバーとして登録されていません。管理者に招待・登録を依頼してください。');
+      return;
+    }
+    const {data:role,error:roleError}=await sbClient
+      .from('user_roles')
+      .select('role')
+      .eq('user_id',session.user.id)
+      .maybeSingle();
+    if(roleError)throw roleError;
+    if(!role){
+      await sbClient.auth.signOut();
+      memberSession=null;
+      setAuthGate(true);
+      authMessage('アカウントの権限設定が完了していません。管理者に連絡してください。');
+      return;
+    }
+  }catch(error){
+    console.error(error);
+    memberSession=null;
+    setAuthGate(true);
+    authMessage('メンバー登録情報を確認できません。管理者が認証用SQLを適用済みか確認してください。');
+    return;
+  }
   memberAuthBooted=true;
   setAuthGate(false);
   authMessage('');
