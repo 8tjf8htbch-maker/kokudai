@@ -544,3 +544,5 @@ body.auth-required > .bottom-nav { visibility:hidden; }
 .auth-error{color:#b42318;min-height:1.2em;margin:8px 0}
 .auth-help{color:var(--muted);margin-bottom:0}
 body:not(.auth-required) .auth-gate{display:none}
+
+.header-actions{display:flex;align-items:center;gap:8px}
