@@ -36,6 +36,7 @@ let lastSyncedRevision=0;
 let syncRunning=false;
 let syncPending=false;
 let syncErrorShown=false;
+let realtimeChannel=null;
 const clientId=window.crypto?.randomUUID?.()||uid('client');
 
 const cloneState=value=>structuredClone(value);
@@ -158,7 +159,8 @@ function refreshActiveExtensionScreen(){
 
 function setupRealtime(){
   if(!sbClient)return;
-  sbClient.channel('kokudai-shared-state')
+  if(realtimeChannel){void sbClient.removeChannel(realtimeChannel);realtimeChannel=null;}
+  realtimeChannel=sbClient.channel('kokudai-shared-state')
     .on('postgres_changes',{event:'UPDATE',schema:'public',table:'app_state',filter:'id=eq.1'},payload=>{
       const remoteRevision=Number(payload.new?.revision)||0;
       if(remoteRevision<=lastSyncedRevision)return;
@@ -1379,6 +1381,7 @@ async function startMemberSession(session){
   await bootSharedData();
 }
 async function endMemberSession(){
+  if(realtimeChannel&&sbClient){try{await sbClient.removeChannel(realtimeChannel)}catch(error){console.error(error)}realtimeChannel=null;}
   memberSession=null;
   memberAuthBooted=false;
   state=structuredClone(defaultState);
