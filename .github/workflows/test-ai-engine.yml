@@ -11,6 +11,9 @@ on:
   pull_request:
     paths:
       - "ai_engine/**"
+      - "local-analysis.js"
+      - "extensions.js"
+      - "index.html"
       - ".github/workflows/test-ai-engine.yml"
 
 jobs:
