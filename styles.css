@@ -528,3 +528,21 @@ body{
 
 /* Tournament record form */
 .x-tournament-register{padding:16px}.x-tournament-register .setup-card-title{margin-bottom:12px}.x-tournament-register .form-card-inner{gap:10px}.x-tournament-register .form-field{min-width:0}.x-tournament-register .form-card-inner label{font-size:11px;font-weight:700;color:var(--muted)}.x-tournament-register .form-card-inner input,.x-tournament-register .form-card-inner select,.x-tournament-register .form-card-inner textarea{box-sizing:border-box;margin-top:5px;width:100%;min-width:0;min-height:44px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);font-size:14px;padding:10px 12px;outline:none}.x-tournament-register .form-card-inner input[type=date]{text-align:left}.x-tournament-register .form-card-inner textarea{min-height:76px;line-height:1.5}.x-tournament-register .form-card-inner input:focus,.x-tournament-register .form-card-inner select:focus,.x-tournament-register .form-card-inner textarea:focus{border-color:#c9a9bd;box-shadow:0 0 0 3px rgba(176,0,115,.08)}.x-tournament-register-btn{margin-top:12px;min-height:44px;padding:10px 22px}.x-tournament-register .form-card-inner{grid-template-columns:1fr 1fr}.x-tournament-register .form-card-inner .form-field:nth-child(1),.x-tournament-register .form-card-inner .form-field:nth-child(6){grid-column:1 / -1}@media(max-width:480px){.x-tournament-register{padding:13px}.x-tournament-register .form-card-inner{grid-template-columns:1fr;gap:9px}.x-tournament-register .form-card-inner .form-field:nth-child(1),.x-tournament-register .form-card-inner .form-field:nth-child(6){grid-column:auto}.x-tournament-register .form-card-inner input,.x-tournament-register .form-card-inner select,.x-tournament-register .form-card-inner textarea{font-size:13px}.x-tournament-register-btn{width:auto;min-width:100px}}
+
+
+/* Supabase Auth member login gate */
+body.auth-required > .app-header,
+body.auth-required > #app,
+body.auth-required > .bottom-nav { visibility:hidden; }
+.auth-gate{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:var(--bg,#f7f5f1);overflow:auto}
+.auth-card{width:min(420px,100%);padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--surface,#fff);box-shadow:0 18px 55px rgba(0,0,0,.10)}
+.auth-card .brand-mark{font-weight:900;font-size:27px;letter-spacing:.02em;color:var(--accent,#AE0079);margin-bottom:8px}
+.auth-card h2{margin:6px 0 8px;font-size:24px}
+.auth-card p{font-size:13px;line-height:1.7}
+.auth-card label{display:block;margin:15px 0 6px;font-size:12px;font-weight:700}
+.auth-card input{width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--ink)}
+.auth-error{color:#b42318;min-height:1.2em;margin:8px 0}
+.auth-help{color:var(--muted);margin-bottom:0}
+body:not(.auth-required) .auth-gate{display:none}
+
+.header-actions{display:flex;align-items:center;gap:8px}
