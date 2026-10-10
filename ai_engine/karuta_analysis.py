@@ -99,9 +99,21 @@ def analyze(payload: dict[str, Any]) -> dict[str, Any]:
     practice_summary = payload.get("practiceSummary")
     if not isinstance(practice_summary, dict):
         practice_summary = _summary(practice_rows)
+    else:
+        # Keep the app's existing avgMargin field while providing a stable,
+        # numeric value for the analysis output.
+        practice_summary = dict(practice_summary)
+        practice_summary["avgMargin"] = _number(
+            practice_summary.get("avgMargin", practice_summary.get("averageMargin"))
+        )
     tournament_summary = payload.get("tournamentSummary")
     if not isinstance(tournament_summary, dict):
         tournament_summary = _summary(tournament_rows)
+    else:
+        tournament_summary = dict(tournament_summary)
+        tournament_summary["avgMargin"] = _number(
+            tournament_summary.get("avgMargin", tournament_summary.get("averageMargin"))
+        )
 
     insights: list[str] = []
     suggestions: list[str] = []
@@ -127,7 +139,33 @@ def analyze(payload: dict[str, Any]) -> dict[str, Any]:
         else:
             insights.append("直近とその前の期間で、勝率に大きな差は見られません。")
 
-    opponents = _opponent_analysis(practice_rows)
+    # The app supplies opponentSummary over the full practice history, while
+    # recentResults is intentionally capped at 20 rows. Prefer the full summary
+    # so opponent comparisons are not accidentally limited to recent matches.
+    supplied_opponents = payload.get("opponentSummary")
+    if isinstance(supplied_opponents, list):
+        opponents = []
+        for item in supplied_opponents:
+            if not isinstance(item, dict) or not str(item.get("name") or "").strip():
+                continue
+            total_matches = int(_number(item.get("total")))
+            wins = int(_number(item.get("wins")))
+            win_rate = item.get("winRate")
+            if win_rate is None and total_matches:
+                win_rate = wins / total_matches
+            opponents.append({
+                "name": str(item["name"]),
+                "rank": str(item.get("rank") or "不明"),
+                "total": total_matches,
+                "wins": wins,
+                "losses": int(_number(item.get("losses"), max(0, total_matches - wins))),
+                "winRate": round(_number(win_rate), 4) if win_rate is not None else None,
+                "avgMargin": _number(item.get("avgMargin")),
+                "reliability": "参考値" if total_matches < 3 else "一定の参考情報",
+            })
+        opponents.sort(key=lambda item: (-item["total"], item["name"]))
+    else:
+        opponents = _opponent_analysis(practice_rows)
     sufficiently_sampled = [item for item in opponents if item["total"] >= 3]
     if sufficiently_sampled:
         lowest = min(sufficiently_sampled, key=lambda item: item["winRate"] if item["winRate"] is not None else 1)
