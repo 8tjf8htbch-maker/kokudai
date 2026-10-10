@@ -5,6 +5,10 @@ on:
     paths:
       - "ai_engine/**"
       - "local-analysis.js"
+      - "local-analysis.test.js"
+      - "extensions.js"
+      - "index.html"
+      - "local-analysis.js"
       - "extensions.js"
       - "index.html"
       - ".github/workflows/test-ai-engine.yml"
@@ -37,3 +41,6 @@ jobs:
       - name: Start API and run synthetic-data smoke test
         working-directory: ai_engine
         run: python test_api_smoke.py
+
+      - name: Check browser-local analysis JavaScript
+        run: node --check local-analysis.js && node --check extensions.js && node local-analysis.test.js
