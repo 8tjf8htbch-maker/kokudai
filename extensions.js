@@ -569,38 +569,30 @@
     };
   }
 
-  async function xRunRealAiAnalysis(id){
+  function xRunRealAiAnalysis(id){
     const box=$('xRealAiResult');
     const btn=$('xRunRealAi');
     if(!box||!btn)return;
     box.classList.remove('hidden');
-    box.innerHTML='<div class="x-ai-loading">この端末内で記録を分析しています…</div>';
     btn.disabled=true;
     try{
-      const engine=window.KOKUDAI_LOCAL_ANALYSIS;
-      if(!engine||typeof engine.analyze!=='function'){
-        throw new Error('ローカル分析エンジンを読み込めません。画面を更新して再度お試しください。');
+      if(!window.KOKUDAI_LOCAL_ANALYSIS||typeof window.KOKUDAI_LOCAL_ANALYSIS.analyze!=='function'){
+        throw new Error('端末内分析モジュールを読み込めませんでした。画面を更新してください。');
       }
-      // Analysis runs synchronously in this browser tab. No fetch or external AI request.
-      const result=engine.analyze(xBuildAiPayload(id));
-      const section=(title,items)=>'<h4>'+esc(title)+'</h4><ul>'+items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
-      const trend=result.trend;
-      let trendHtml='';
-      if(trend&&trend.recent.total&&trend.previous.total){
-        const pct=v=>v===null?'—':Math.round(v*100)+'%';
-        trendHtml='<p>直近最大10試合：'+pct(trend.recent.winRate)+'（'+trend.recent.total+'試合） / その前：'+pct(trend.previous.winRate)+'（'+trend.previous.total+'試合）</p>';
-      }
-      const opponentHtml=result.opponents.length
-        ?'<h4>相手別の記録</h4><ul>'+result.opponents.slice(0,8).map(o=>'<li>'+esc(o.name)+'（'+esc(o.rank)+'）：'+o.wins+'勝'+o.losses+'敗 / '+(o.winRate===null?'—':Math.round(o.winRate*100)+'%')+'、'+o.total+'試合'+(o.total<3?'・参考値':'')+'</li>').join('')+'</ul>'
-        :'<p>相手別の比較に必要な記録がまだありません。</p>';
-      box.innerHTML='<div class="eyebrow">端末内のローカル分析</div><h4>'+esc(result.targetPlayer.name)+' の記録分析</h4>'+
-        '<p>練習：'+result.practiceSummary.total+'試合 / '+result.practiceSummary.wins+'勝'+result.practiceSummary.losses+'敗'+(result.practiceSummary.winRate===null?'':' / 勝率'+Math.round(result.practiceSummary.winRate*100)+'%')+'</p>'+
-        trendHtml+section('記録から読み取れる傾向',result.insights)+section('次回の練習候補',result.suggestions)+opponentHtml+
-        section('分析上の注意',result.limitations)+
-        '<p class="muted">通信による分析データの送信は行っていません。</p>';
+      const result=window.KOKUDAI_LOCAL_ANALYSIS.analyze(xBuildAiPayload(id));
+      const pct=v=>v==null?'—':Math.round(Number(v)*100)+'%';
+      const opponents=(result.opponents||[]).length
+        ? '<ul>'+result.opponents.slice(0,5).map(o=>'<li>'+esc(o.name)+'：'+o.wins+'勝'+o.losses+'敗（'+pct(o.winRate)+'、'+o.total+'試合）</li>').join('')+'</ul>'
+        : '<p class="muted">相手別の集計データがありません。</p>';
+      box.innerHTML='<div class="eyebrow">端末内の統計分析</div><h4>'+esc(result.targetPlayer?.name||'対象選手')+' の分析</h4>'+
+        '<p class="muted">この分析処理は端末内で実行しました。分析データを外部の生成AI APIへ送信していません。</p>'+
+        '<h4>分析結果</h4><ul>'+(result.insights||[]).map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>'+
+        '<h4>次回の練習提案</h4><ul>'+(result.suggestions||[]).map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>'+
+        '<h4>相手別の記録</h4>'+opponents+
+        '<details><summary>分析上の注意</summary><ul>'+(result.limitations||[]).map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul></details>';
     }catch(error){
       console.error(error);
-      box.innerHTML='<div class="eyebrow">ローカル分析</div><h4>分析できませんでした</h4><p class="muted">'+esc(error?.message||String(error))+'</p>';
+      box.innerHTML='<div class="eyebrow">端末内の統計分析</div><h4>分析できませんでした</h4><p class="muted">'+esc(error?.message||String(error))+'</p>';
     }finally{
       btn.disabled=false;
     }
