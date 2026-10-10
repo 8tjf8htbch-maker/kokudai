@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 
 const context = { window: {} };
-vm.runInNewContext(fs.readFileSync('../local-analysis.js', 'utf8'), context, { timeout: 1000 });
+vm.runInNewContext(fs.readFileSync('local-analysis.js', 'utf8'), context, { timeout: 1000 });
 const analyze = context.window.KOKUDAI_LOCAL_ANALYSIS.analyze;
 const result = analyze({
   targetPlayer: { name: 'Synthetic Player', rank: 'B級' },
