@@ -34,6 +34,19 @@ class KarutaAnalysisTests(unittest.TestCase):
         self.assertEqual(result["opponents"][0]["wins"], 2)
         self.assertEqual(result["opponents"][0]["winRate"], 0.6667)
 
+    def test_full_history_opponent_summary_is_preferred(self):
+        result = analyze({
+            "recentResults": [
+                {"date": "2026-01-01", "win": True, "opponent": "相手A", "opponentRank": "B級", "margin": 2},
+            ],
+            "opponentSummary": [
+                {"name": "相手A", "rank": "B級", "total": 12, "wins": 8, "losses": 4, "avgMargin": 2.5},
+            ],
+        })
+        self.assertEqual(result["opponents"][0]["total"], 12)
+        self.assertEqual(result["opponents"][0]["winRate"], round(8 / 12, 4))
+        self.assertEqual(result["opponents"][0]["avgMargin"], 2.5)
+
     def test_trend_compares_recent_and_previous_ten(self):
         rows = []
         for i in range(20):
