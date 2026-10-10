@@ -78,5 +78,13 @@ async def run_analysis(
     if not isinstance(payload, dict):
         raise HTTPException(status_code=422, detail="JSON body must be an object")
 
+    # Reject malformed top-level shapes rather than letting them become server errors.
+    for key in ("targetPlayer", "practiceSummary", "tournamentSummary"):
+        if key in payload and payload[key] is not None and not isinstance(payload[key], dict):
+            raise HTTPException(status_code=422, detail=f"{key} must be an object")
+    for key in ("recentResults", "opponentSummary", "tournamentResults"):
+        if key in payload and payload[key] is not None and not isinstance(payload[key], list):
+            raise HTTPException(status_code=422, detail=f"{key} must be an array")
+
     # Analyze in memory only. Do not print payloads, names, or results to logs.
     return analyze(payload)
