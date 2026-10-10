@@ -26,3 +26,6 @@ jobs:
       - name: Run unit tests
         working-directory: ai_engine
         run: python -m unittest -v
+      - name: Start API and run synthetic-data smoke test
+        working-directory: ai_engine
+        run: python test_api_smoke.py
