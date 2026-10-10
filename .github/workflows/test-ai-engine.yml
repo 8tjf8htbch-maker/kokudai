@@ -12,6 +12,7 @@ on:
   pull_request:
     paths:
       - "ai_engine/**"
+      - "local-analysis.test.js"
       - "local-analysis.js"
       - "extensions.js"
       - "index.html"
