@@ -56,6 +56,15 @@ class ApiTests(unittest.TestCase):
             )
         self.assertEqual(response.status_code, 503)
 
+
+    def test_invalid_payload_shape_is_rejected(self):
+        response = self.client.post(
+            "/api/analysis/v1/analyze",
+            headers={"Authorization": "Bearer test-only-token"},
+            json={"targetPlayer": "not-an-object"},
+        )
+        self.assertEqual(response.status_code, 422)
+
     def test_oversized_request_rejected(self):
         response = self.client.post(
             "/api/analysis/v1/analyze",
