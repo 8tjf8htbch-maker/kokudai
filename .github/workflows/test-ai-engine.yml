@@ -1,0 +1,44 @@
+name: Test local AI engine
+
+on:
+  push:
+    paths:
+      - "ai_engine/**"
+      - "local-analysis.js"
+      - "local-analysis.test.js"
+      - "extensions.js"
+      - "index.html"
+      - ".github/workflows/test-ai-engine.yml"
+  pull_request:
+    paths:
+      - "ai_engine/**"
+      - "local-analysis.test.js"
+      - "local-analysis.js"
+      - "extensions.js"
+      - "index.html"
+      - ".github/workflows/test-ai-engine.yml"
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install API test dependencies
+        working-directory: ai_engine
+        run: python -m pip install -r requirements.txt
+      - name: Run unit tests
+        working-directory: ai_engine
+        run: python -m unittest -v
+      - name: Test browser-local analysis with synthetic data
+        run: node ai_engine/test_browser_analysis.cjs
+      - name: Start API and run synthetic-data smoke test
+        working-directory: ai_engine
+        run: python test_api_smoke.py
+
+      - name: Check browser-local analysis JavaScript
+        run: node --check local-analysis.js && node --check extensions.js && node local-analysis.test.js
