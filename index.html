@@ -10,7 +10,22 @@
 <link rel="stylesheet" href="styles.css?v=20261002-3">
 <script>(function(){try{var id=sessionStorage.getItem('kokudai-current-screen');var allowed=['screenPlayers','screenHistory','screenTournaments','screenSetup','screenPractice','screenPairing','screenStats','screenTournament','screenHowTo','screenAdminManual','screenAdminHowto','screenAdminPlayers','screenAdminTournaments','screenAdminData','screenAdminBackup','screenAdminReset','screenAdminHandover','screenAdminTrouble','screenContact'];if(allowed.indexOf(id)!==-1&&(!String(id).startsWith('screenAdmin')||sessionStorage.getItem('kokudai_admin')==='1')){var st=document.createElement('style');st.id='initial-screen-style';st.textContent='#screenHome{display:none!important}#'+id+'{display:block!important}';document.head.appendChild(st)}}catch(e){}})();</script>
 </head>
-<body>
+<body class="auth-required">\n<section id="authGate" class="auth-gate" aria-labelledby="authTitle">
+  <form id="authForm" class="auth-card">
+    <div class="brand-mark">國大練習</div>
+    <div class="eyebrow">國學院大學かるた会</div>
+    <h2 id="authTitle">メンバーログイン</h2>
+    <p class="muted">サークルのアカウントでログインしてください。アカウントは管理者から招待された方のみ利用できます。</p>
+    <label for="authEmail">メールアドレス</label>
+    <input id="authEmail" type="email" autocomplete="username" required placeholder="登録したメールアドレス">
+    <label for="authPassword">パスワード</label>
+    <input id="authPassword" type="password" autocomplete="current-password" required placeholder="パスワード">
+    <p id="authError" class="auth-error" role="alert" aria-live="polite"></p>
+    <button id="authSubmit" class="primary-btn wide" type="submit">ログイン</button>
+    <p class="auth-help">ログインできない場合は、サークルの管理者に連絡してください。</p>
+  </form>
+</section>
+
 <header class="app-header">
   <button id="brandHomeBtn" class="brand brand-home" type="button" aria-label="ホームへ">
     <div class="brand-mark">國大練習</div>
