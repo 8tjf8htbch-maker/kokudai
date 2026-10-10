@@ -62,10 +62,15 @@ async def run_analysis(
     ):
         raise HTTPException(status_code=401, detail="Unauthorized")
 
-    # Content-Length is not always present, so enforce the limit while reading too.
-    body = await request.body()
-    if len(body) > MAX_BODY_BYTES:
-        raise HTTPException(status_code=413, detail="Request body too large")
+    # Enforce the limit while streaming, even when Content-Length is absent.
+    chunks: list[bytes] = []
+    body_size = 0
+    async for chunk in request.stream():
+        body_size += len(chunk)
+        if body_size > MAX_BODY_BYTES:
+            raise HTTPException(status_code=413, detail="Request body too large")
+        chunks.append(chunk)
+    body = b"".join(chunks)
     try:
         payload = json.loads(body)
     except (json.JSONDecodeError, UnicodeDecodeError):
