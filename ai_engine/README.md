@@ -59,3 +59,51 @@ print(result["suggestions"])
 - データ量や解釈に関する注意書き
 
 この段階では、勝敗予測モデルや動画解析はまだ含みません。統計値は練習記録の傾向を示すもので、勝敗の原因や選手の実力を断定するものではありません。
+
+
+## ローカルAPIプロトタイプ（本番未接続）
+
+Python分析エンジンをHTTP経由で呼び出すための試作APIです。GitHub PagesやSupabase、本番の選手データとは接続していません。
+
+### 起動
+
+Python 3.10以降で、まず依存ライブラリをインストールします。
+
+```bash
+cd ai_engine
+python -m venv .venv
+# macOS/Linux:
+source .venv/bin/activate
+# Windows PowerShell:
+# .venv\\Scripts\\Activate.ps1
+pip install -r requirements.txt
+```
+
+APIトークンは自分のPC上で生成し、環境変数として設定してください。トークンをソースコード、GitHub、フロントエンドに書き込まないでください。
+
+```bash
+# macOS/Linux: ターミナルごとに設定
+export KOKUDAI_AI_API_TOKEN="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
+uvicorn api:app --host 127.0.0.1 --port 8000
+```
+
+Windows PowerShellの場合は、`$env:KOKUDAI_AI_API_TOKEN = [guid]::NewGuid().ToString() + [guid]::NewGuid().ToString()` を設定してから起動します。
+
+- ヘルスチェック：`GET http://127.0.0.1:8000/health`
+- 分析：`POST http://127.0.0.1:8000/api/analysis/v1/analyze`（`Authorization: Bearer <トークン>` が必須）
+- APIドキュメント画面は無効にしています。
+- 入力本文は最大約1MB。レスポンスはキャッシュ禁止です。
+- APIは分析結果を保存せず、生成AI APIにも送信しません。
+
+### セキュリティ上の重要な制約
+
+この試作はローカルPCの `127.0.0.1` にだけバインドしてください。インターネットに公開するための完成版ではありません。CORS許可設定、レート制限、HTTPS、認証済みユーザーと選手データの権限検証、ホスティング事業者のログ・保存方針などを別途レビューする必要があります。
+
+静的なGitHub PagesのJavaScriptに共通APIトークンを埋め込むと、利用者に見えてしまうため禁止です。本番接続には、共有トークンを配るのではなく、利用者認証とサーバー側のアクセス権検証を設計してください。テストには合成データだけを使ってください。
+
+### APIテスト
+
+```bash
+pip install -r requirements.txt
+python -m unittest -v
+```
