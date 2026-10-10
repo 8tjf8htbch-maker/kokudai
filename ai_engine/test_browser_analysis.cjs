@@ -30,5 +30,5 @@ assert.equal(result.practiceSummary.total, 6);
 assert.equal(result.opponents.length, 2);
 assert.ok(result.insights.length > 0);
 assert.ok(result.suggestions.length > 0);
-assert.ok(result.limitations.some(text => text.includes('生成AI APIへ記録を送信しません')));
+assert.ok(result.limitations.some(text => text.includes('生成AI APIへ送信しません')));
 console.log('Browser-local analysis tests passed (synthetic data only).');
