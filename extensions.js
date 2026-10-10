@@ -509,7 +509,7 @@
       card('大会との比較',
         '<div class="stats-opponent-row"><b>大会</b><strong>'+ts.wins+'勝'+ts.losses+'敗</strong><span>'+fmtPct(ts.wins,ts.total)+'</span></div>'+
         '<div class="stats-opponent-row"><b>大会試合数</b><strong>'+ts.total+'試合</strong><span>'+ts.avgMargin.toFixed(1)+'枚差平均</span></div>')+
-      '<section class="card x-ai-card"><div class="eyebrow">AI ANALYSIS</div><h3>AI分析</h3><p class="muted">まず記録データから自動分析し、必要なら実際のAIに詳しく分析させます。</p><p style="color:#d00;font-weight:700">※ AI分析は、接続状況やサービスの状態など、さまざまな要因によりご利用いただけない場合があります。</p><div class="x-ai-list">'+xAiInsights(id).map((t,i)=>'<div class="x-ai-item"><span>'+(i+1)+'</span><p>'+esc(t)+'</p></div>').join('')+'</div><div id="xRealAiResult" class="x-real-ai-result hidden"></div><div class="x-ai-actions"><button id="xRunRealAi" class="accent-btn" type="button">AIに詳しく分析してもらう</button><button id="xAiPairingBtn" class="secondary-btn" type="button">AI提案を使って対戦を組む</button><button id="xCopyAiPrompt" class="secondary-btn" type="button">AI分析用データをコピー</button></div></section>'+
+      '<section class="card x-ai-card"><div class="eyebrow">AI ANALYSIS</div><h3>AI分析</h3><p class="muted">記録データをこの端末内で統計分析します。外部の生成AI APIへ記録を送信しません。</p><p style="color:#d00;font-weight:700">※ AI分析は、接続状況やサービスの状態など、さまざまな要因によりご利用いただけない場合があります。</p><div class="x-ai-list">'+xAiInsights(id).map((t,i)=>'<div class="x-ai-item"><span>'+(i+1)+'</span><p>'+esc(t)+'</p></div>').join('')+'</div><div id="xRealAiResult" class="x-real-ai-result hidden"></div><div class="x-ai-actions"><button id="xRunRealAi" class="accent-btn" type="button">記録を詳しく分析する</button><button id="xAiPairingBtn" class="secondary-btn" type="button">AI提案を使って対戦を組む</button><button id="xCopyAiPrompt" class="secondary-btn" type="button">AI分析用データをコピー</button></div></section>'+
       '<section class="card x-stats-card"><div class="stats-section-head"><h4>次の練習候補</h4><span>記録からの提案</span></div>'+xPracticeSuggestions(id)+'</section>';
 
     $('xCopyAiPrompt').onclick=()=>xCopyAiPrompt(id);
@@ -574,33 +574,33 @@
     const btn=$('xRunRealAi');
     if(!box||!btn)return;
     box.classList.remove('hidden');
-    box.innerHTML='<div class="x-ai-loading">AIが記録を分析しています…</div>';
+    box.innerHTML='<div class="x-ai-loading">この端末内で記録を分析しています…</div>';
     btn.disabled=true;
     try{
-      if(!SUPABASE_URL||!SUPABASE_PUBLISHABLE_KEY){
-        throw new Error('Supabaseの設定がありません。');
+      const engine=window.KOKUDAI_LOCAL_ANALYSIS;
+      if(!engine||typeof engine.analyze!=='function'){
+        throw new Error('ローカル分析エンジンを読み込めません。画面を更新して再度お試しください。');
       }
-      const response=await fetch(SUPABASE_URL+'/functions/v1/ai-analysis',{
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json',
-          'apikey':SUPABASE_PUBLISHABLE_KEY,
-          'Authorization':'Bearer '+SUPABASE_PUBLISHABLE_KEY
-        },
-        body:JSON.stringify({data:xBuildAiPayload(id)})
-      });
-      const result=await response.json().catch(()=>({}));
-      if(!response.ok){
-        const rawDetail=typeof result?.detail==='string'?result.detail:
-          typeof result?.error==='string'?result.error:
-          result?.error?.message||result?.message||result?.error||'';
-        const detail=typeof rawDetail==='string'?rawDetail:JSON.stringify(rawDetail);
-        throw new Error(detail||'AI分析に失敗しました（HTTP '+response.status+'）。');
+      // Analysis runs synchronously in this browser tab. No fetch or external AI request.
+      const result=engine.analyze(xBuildAiPayload(id));
+      const section=(title,items)=>'<h4>'+esc(title)+'</h4><ul>'+items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+      const trend=result.trend;
+      let trendHtml='';
+      if(trend&&trend.recent.total&&trend.previous.total){
+        const pct=v=>v===null?'—':Math.round(v*100)+'%';
+        trendHtml='<p>直近最大10試合：'+pct(trend.recent.winRate)+'（'+trend.recent.total+'試合） / その前：'+pct(trend.previous.winRate)+'（'+trend.previous.total+'試合）</p>';
       }
-      box.innerHTML='<div class="eyebrow">REAL AI</div><h4>AIによる分析</h4><div class="x-real-ai-text">'+esc(result.analysis||'分析結果がありません。').replaceAll('\\n','<br>')+'</div>';
+      const opponentHtml=result.opponents.length
+        ?'<h4>相手別の記録</h4><ul>'+result.opponents.slice(0,8).map(o=>'<li>'+esc(o.name)+'（'+esc(o.rank)+'）：'+o.wins+'勝'+o.losses+'敗 / '+(o.winRate===null?'—':Math.round(o.winRate*100)+'%')+'、'+o.total+'試合'+(o.total<3?'・参考値':'')+'</li>').join('')+'</ul>'
+        :'<p>相手別の比較に必要な記録がまだありません。</p>';
+      box.innerHTML='<div class="eyebrow">端末内のローカル分析</div><h4>'+esc(result.targetPlayer.name)+' の記録分析</h4>'+
+        '<p>練習：'+result.practiceSummary.total+'試合 / '+result.practiceSummary.wins+'勝'+result.practiceSummary.losses+'敗'+(result.practiceSummary.winRate===null?'':' / 勝率'+Math.round(result.practiceSummary.winRate*100)+'%')+'</p>'+
+        trendHtml+section('記録から読み取れる傾向',result.insights)+section('次回の練習候補',result.suggestions)+opponentHtml+
+        section('分析上の注意',result.limitations)+
+        '<p class="muted">通信による分析データの送信は行っていません。</p>';
     }catch(error){
       console.error(error);
-      box.innerHTML='<div class="eyebrow">REAL AI</div><h4>AI分析を利用できません</h4><p class="muted">'+esc(error?.message||String(error))+'</p><p class="muted">Supabase Edge Function と GEMINI_API_KEY の設定を確認してください。</p>';
+      box.innerHTML='<div class="eyebrow">ローカル分析</div><h4>分析できませんでした</h4><p class="muted">'+esc(error?.message||String(error))+'</p>';
     }finally{
       btn.disabled=false;
     }
