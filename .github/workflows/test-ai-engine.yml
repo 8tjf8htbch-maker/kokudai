@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - "ai_engine/**"
+      - "local-analysis.js"
+      - "extensions.js"
+      - "index.html"
       - ".github/workflows/test-ai-engine.yml"
   pull_request:
     paths:
@@ -26,6 +29,8 @@ jobs:
       - name: Run unit tests
         working-directory: ai_engine
         run: python -m unittest -v
+      - name: Test browser-local analysis with synthetic data
+        run: node ai_engine/test_browser_analysis.cjs
       - name: Start API and run synthetic-data smoke test
         working-directory: ai_engine
         run: python test_api_smoke.py
