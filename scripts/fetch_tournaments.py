@@ -134,28 +134,30 @@ def extract_document_text(url):
 
 
 def find_deadline(text, event_date):
-    """Only accept a date close to an explicit application/deadline phrase."""
+    """Accept only dates explicitly tied to advance application, never event-day reception."""
     text = clean(text).replace("：", ":")
     patterns = [
-        r"(?:申込|申し込み|申込み|参加申込|受付)(?:期限|締切|締め切り|締切日|期限日|期間)?",
-        r"(?:締切|締め切り|申込期限|申込締切|受付期限)",
-        r"(?:必着|消印有効)",
+        r"(?:参加)?(?:申込|申し込み|申込み)(?:の)?(?:締切|締め切り|期限|締切日|期限日)",
+        r"(?:申込|申し込み|申込み)(?:受付)?(?:期間|期限|締切|締め切り)",
+        r"(?:申込書|参加申込書)[^。\n]{0,35}(?:必着|締切|締め切り|期限)",
+        r"(?:申込|申し込み|申込み)[^。\n]{0,35}(?:まで|必着|消印有効)",
+        r"申込期間",
     ]
     hits = []
     for pattern in patterns:
         for match in re.finditer(pattern, text):
-            start = max(0, match.start() - 45)
+            start = max(0, match.start() - 25)
             end = min(len(text), match.end() + 100)
             context = text[start:end]
-            candidates = date_candidates(context, event_date)
-            if candidates:
-                # Prefer a date after the keyword; otherwise accept only the nearest explicit date.
-                after = date_candidates(text[match.end():min(len(text), match.end() + 90)], event_date)
-                chosen = after[0] if after else candidates[-1]
+            after = date_candidates(text[match.end():min(len(text), match.end() + 100)], event_date)
+            candidates = after or date_candidates(context, event_date)
+            for chosen in candidates:
                 parsed = date.fromisoformat(chosen)
                 event = date.fromisoformat(event_date)
-                if parsed <= event and (event - parsed).days <= 370:
-                    hits.append((abs((event - parsed).days), chosen, context))
+                # Application must close before the event; ignore reception/check-in on event day.
+                if parsed < event and (event - parsed).days <= 370:
+                    hits.append(((event - parsed).days, chosen, context))
+                    break
     if not hits:
         return None, ""
     hits.sort(key=lambda item: item[0])
