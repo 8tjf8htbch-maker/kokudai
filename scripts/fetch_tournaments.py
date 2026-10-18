@@ -45,9 +45,10 @@ def iso_date(s):
 
 
 def date_candidates(text, event_date):
-    """Parse full dates and month/day dates, inferring a year only from event date."""
+    """Parse western-calendar, Reiwa-era, and month/day dates near deadline wording."""
     found = []
-    for m in re.finditer(r"(?:令和\s*[元0-9]+\s*年\s*)?(?:20[0-9]{2}\s*年\s*)?[0-9]{1,2}\s*月\s*[0-9]{1,2}\s*日?", text):
+    pattern = r"令和\s*[元0-9]+\s*年\s*[0-9]{1,2}\s*月\s*[0-9]{1,2}\s*日?|20[0-9]{2}\s*年\s*[0-9]{1,2}\s*月\s*[0-9]{1,2}\s*日?|[0-9]{1,2}\s*月\s*[0-9]{1,2}\s*日?"
+    for m in re.finditer(pattern, text):
         token = m.group(0)
         parsed = iso_date(token)
         if not parsed:
