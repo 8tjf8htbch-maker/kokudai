@@ -1,184 +1,5 @@
 [
   {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19259",
-    "seriesId": "令和8年熊本地震復興支援チャリティー大会",
-    "name": "令和8年熊本地震復興支援チャリティー大会",
-    "date": "2026-10-03",
-    "venue": "関東第一高校",
-    "prefecture": "東京都",
-    "ranks": [
-      "B"
-    ],
-    "officialDeadline": "2026-09-05",
-    "kokudaiDeadline": "2026-08-29",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19259/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/08/令和8年熊本地震復興チャリティー大会.pdf"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:07.768481+00:00"
-  },
-  {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19276",
-    "seriesId": "全国競技かるた新潟大会",
-    "name": "第8回全国競技かるた新潟大会",
-    "date": "2026-10-03",
-    "venue": "新潟県立武道館",
-    "prefecture": "新潟県",
-    "ranks": [
-      "C",
-      "D",
-      "E"
-    ],
-    "officialDeadline": "2026-09-14",
-    "kokudaiDeadline": "2026-09-07",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19276/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第8回全国競技かるた新潟大会（CDE級）案内.pdf"
-      },
-      {
-        "label": "参加申込書",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/【○○会】第8回全国競技かるた新潟大会（CDE級）申込書.xlsx"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:08.672533+00:00"
-  },
-  {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19258",
-    "seriesId": "令和8年熊本地震復興支援チャリティー大会",
-    "name": "令和8年熊本地震復興支援チャリティー大会",
-    "date": "2026-10-04",
-    "venue": "関東第一高校",
-    "prefecture": "東京都",
-    "ranks": [
-      "A"
-    ],
-    "officialDeadline": "2026-09-05",
-    "kokudaiDeadline": "2026-08-29",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19258/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/08/令和8年熊本地震復興チャリティー大会.pdf"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:06.304745+00:00"
-  },
-  {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19268",
-    "seriesId": "令和8年熊本地震復興支援チャリティー大会",
-    "name": "令和8年熊本地震復興支援チャリティー大会",
-    "date": "2026-10-10",
-    "venue": "関東第一高校",
-    "prefecture": "東京都",
-    "ranks": [
-      "C"
-    ],
-    "officialDeadline": "2026-09-05",
-    "kokudaiDeadline": "2026-08-29",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19268/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/08/令和8年熊本地震復興チャリティー大会.pdf"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:05.542634+00:00"
-  },
-  {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-18750",
-    "seriesId": "全国競技かるた多摩大会（町田市大会）",
-    "name": "第33回全国競技かるた多摩大会（町田市大会）",
-    "date": "2026-10-11",
-    "venue": "町田市総合体育館",
-    "prefecture": "東京都",
-    "ranks": [],
-    "officialDeadline": "2026-09-20",
-    "kokudaiDeadline": "2026-09-13",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/18750/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/07/33rd多摩大会初心者（町田市大会）.docx"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:03.151867+00:00"
-  },
-  {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19315",
-    "seriesId": "全国競技かるた千葉大会",
-    "name": "第4回全国競技かるた千葉大会",
-    "date": "2026-10-11",
-    "venue": "成田市・重兵衛スポーツフィールド中台　柔道場",
-    "prefecture": "千葉県",
-    "ranks": [
-      "B"
-    ],
-    "officialDeadline": "2026-09-20",
-    "kokudaiDeadline": "2026-09-13",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19315/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第４回千葉大会案内Ｂ級_260901_final.pdf"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:04.104621+00:00"
-  },
-  {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19303",
-    "seriesId": "全国競技かるた東京吉野会大会",
-    "name": "第45回全国競技かるた東京吉野会大会",
-    "date": "2026-10-12",
-    "venue": "川口総合文化センター「リリア」10階和室",
-    "prefecture": "埼玉県",
-    "ranks": [
-      "A"
-    ],
-    "officialDeadline": "2026-09-18",
-    "kokudaiDeadline": "2026-09-11",
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19303/",
-    "documents": [
-      {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第45回東京吉野会大会案内（Ａ級）.pdf"
-      }
-    ],
-    "fetchedAt": "2026-10-02T15:55:02.375164+00:00"
-  },
-  {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19336",
     "seriesId": "人麿の里・全国競技かるた益田大会",
     "name": "第31回人麿の里・全国競技かるた益田大会",
@@ -193,15 +14,11 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19336/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第31回益田大会（E級2回目）案内.docx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:55:00.153181+00:00"
+    "fetchedAt": "2026-10-18T10:05:40.983121+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19271",
@@ -218,10 +35,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19271/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/08/第73期名人位・第71期クイーン位東西予選案内.pdf"
       },
@@ -230,7 +43,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/08/第73期名人戦・第71期クイーン戦東西予選申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:55:01.320044+00:00"
+    "fetchedAt": "2026-10-18T10:05:41.997515+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19306",
@@ -248,10 +61,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19306/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第85回北國大会開催案内.docx"
       },
@@ -260,7 +69,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第85回北國大会参加申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:59.052112+00:00"
+    "fetchedAt": "2026-10-18T10:05:40.333750+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19311",
@@ -278,10 +87,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19311/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第56回全国競技かるた松山大会DE級②ご案内.docx"
       },
@@ -290,7 +95,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第56回全国競技かるた松山大会DE級②申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:58.112106+00:00"
+    "fetchedAt": "2026-10-18T10:05:39.684370+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19499",
@@ -305,10 +110,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19499/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/大会案内.doc"
       },
@@ -321,7 +122,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/春江西コミセン地図.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:57.367697+00:00"
+    "fetchedAt": "2026-10-18T10:05:38.958273+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19371",
@@ -340,10 +141,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19371/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/261103_______________BDE_.pdf"
       },
@@ -352,7 +149,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/261103________________BDE_.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:56.663414+00:00"
+    "fetchedAt": "2026-10-18T10:05:38.299614+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19495",
@@ -369,15 +166,15 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19495/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第97回学生選手権E級のご案内.docx"
+      },
+      {
+        "label": "参加申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/【○○会】第97回全国競技かるた学生選手権大会E級参加申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:54.235409+00:00"
+    "fetchedAt": "2026-10-18T10:05:35.869469+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19375",
@@ -394,15 +191,11 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19375/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/2026.11.08宮崎大会D級案内.docx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:55.179980+00:00"
+    "fetchedAt": "2026-10-18T10:05:36.412829+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19468",
@@ -420,10 +213,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19468/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/11.8開催-法人化30周年記念広島大会ご案内.pdf"
       },
@@ -432,7 +221,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/【○○会】第35回広島大会申込書DE級11.8開催.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:55.910165+00:00"
+    "fetchedAt": "2026-10-18T10:05:37.648758+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19492",
@@ -452,15 +241,11 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19492/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/蓮生記念第13回全国競技かるた宇都宮大会ABCD級案内.pdf"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:53.249328+00:00"
+    "fetchedAt": "2026-10-18T10:05:35.005505+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19318",
@@ -478,10 +263,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19318/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/一般社団法人全日本かるた協会-法人化30周年記念-第42回全国競技かるた熊本大会CD級案内.pdf"
       },
@@ -490,7 +271,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/所属会第42回熊本大会CD級参加申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:50.189115+00:00"
+    "fetchedAt": "2026-10-18T10:05:31.916723+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19367",
@@ -511,10 +292,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19367/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第65回和歌山大会案内.pdf"
       },
@@ -523,7 +300,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第65回和歌山大会参加申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:51.135755+00:00"
+    "fetchedAt": "2026-10-18T10:05:33.325146+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19462",
@@ -542,10 +319,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19462/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第22回全国競技かるた香川大会CDE級案内.docx"
       },
@@ -562,7 +335,77 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/お車で来場される方へ（会場周辺マップ）.pdf"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:52.357951+00:00"
+    "fetchedAt": "2026-10-18T10:05:33.996619+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19553",
+    "seriesId": "全国競技かるた奈良大会",
+    "name": "第35回全国競技かるた奈良大会",
+    "date": "2026-11-22",
+    "venue": "ロート奈良第二武道場",
+    "prefecture": "",
+    "ranks": [
+      "D",
+      "E"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19553/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第３５回全国競技かる奈良大会.pdf"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:29.688392+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19545",
+    "seriesId": "全国競技かるた新潟大会",
+    "name": "第8回全国競技かるた新潟大会",
+    "date": "2026-11-22",
+    "venue": "新潟県立武道館",
+    "prefecture": "新潟県",
+    "ranks": [
+      "A",
+      "B"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19545/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第8回全国競技かるた新潟大会案内AB.pdf"
+      },
+      {
+        "label": "申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/11/【○○会】第8回全国競技かるた新潟大会申込書_AB級.xlsx"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:30.404976+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19556",
+    "seriesId": "全国競技かるた奈良大会",
+    "name": "第35回全国競技かるた奈良大会",
+    "date": "2026-11-23",
+    "venue": "ロート奈良第二武道場",
+    "prefecture": "",
+    "ranks": [
+      "B",
+      "C"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19556/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第３５回全国競技かる奈良大会.pdf"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:28.198257+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19486",
@@ -580,10 +423,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19486/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第16回全国競技かるた岡山大会ABC級案内.docx"
       },
@@ -592,7 +431,7 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/（会名）第16回全国競技かるた岡山大会_参加申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:49.132717+00:00"
+    "fetchedAt": "2026-10-18T10:05:26.934555+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19490",
@@ -610,10 +449,6 @@
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19490/",
     "documents": [
       {
-        "label": "大会情報",
-        "url": "https://www.karuta.or.jp/cup-info/"
-      },
-      {
         "label": "大会情報案内",
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第16回全国競技かるた岡山大会ABC級案内.docx"
       },
@@ -622,6 +457,104 @@
         "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/（会名）第16回全国競技かるた岡山大会_参加申込書.xlsx"
       }
     ],
-    "fetchedAt": "2026-10-02T15:54:48.032594+00:00"
+    "fetchedAt": "2026-10-18T10:05:24.353753+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19548",
+    "seriesId": "全国競技かるた信州大会",
+    "name": "第10回全国競技かるた信州大会",
+    "date": "2026-11-29",
+    "venue": "長野県立武道館",
+    "prefecture": "長野県",
+    "ranks": [
+      "D",
+      "E"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19548/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第10回信州大会DE級案内.pdf"
+      },
+      {
+        "label": "申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第10回信州大会DE級参加申込書.xlsx"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:25.065930+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19537",
+    "seriesId": "高松宮記念杯近江神宮全国大会",
+    "name": "第76回高松宮記念杯近江神宮全国大会",
+    "date": "2026-11-29",
+    "venue": "近江神宮勧学館、滋賀市民センター等",
+    "prefecture": "",
+    "ranks": [
+      "D",
+      "E"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19537/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/R08.10-第76回高松宮大会-案内-（E.D級）-Google-ドキュメント.pdf"
+      },
+      {
+        "label": "申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第76回高松宮記念杯出場申込書.xlsx"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:25.886263+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19558",
+    "seriesId": "全国競技かるた奈良大会",
+    "name": "第35回全国競技かるた奈良大会",
+    "date": "2026-12-06",
+    "venue": "東大寺本坊",
+    "prefecture": "",
+    "ranks": [
+      "A"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19558/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第３５回全国競技かる奈良大会.pdf"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:23.237826+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19541",
+    "seriesId": "高松宮記念杯近江神宮全国大会",
+    "name": "第76回高松宮記念杯近江神宮全国大会",
+    "date": "2026-12-13",
+    "venue": "近江神宮勧学館、滋賀市民センター等",
+    "prefecture": "",
+    "ranks": [
+      "C"
+    ],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19541/",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/R08.10-第76回高松宮大会-案内-（C級）-Google-ドキュメント.pdf"
+      },
+      {
+        "label": "申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/第76回高松宮記念杯出場申込書-1.xlsx"
+      }
+    ],
+    "fetchedAt": "2026-10-18T10:05:21.974815+00:00"
   }
 ]
