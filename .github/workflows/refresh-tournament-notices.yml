@@ -77,6 +77,18 @@ jobs:
             echo "Tournament data is already up to date."
           else
             git commit -m "Update tournament notices"
+            if ! git pull --rebase origin main; then
+              conflicts="$(git diff --name-only --diff-filter=U)"
+              if [ "$conflicts" = "data/tournaments.json" ]; then
+                echo "A newer refresh changed the same data; keeping this run's freshly fetched tournament data."
+                git checkout --theirs -- data/tournaments.json
+                git add data/tournaments.json
+                GIT_EDITOR=true git rebase --continue
+              else
+                echo "Rebase failed for an unexpected reason."
+                exit 1
+              fi
+            fi
             git push
           fi
 
