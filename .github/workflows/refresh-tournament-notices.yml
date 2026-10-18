@@ -10,6 +10,7 @@ on:
     paths:
       - ".github/workflows/refresh-tournament-notices.yml"
       - "scripts/fetch_tournaments.py"
+      - "app.js"
 
 permissions:
   contents: write
@@ -33,9 +34,12 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4 pypdf python-docx openpyxl
 
-      - name: Fetch official tournament information
+      - name: Check deadline parser syntax
+        run: python -m py_compile scripts/fetch_tournaments.py
+
+      - name: Fetch official tournament information and primary documents
         run: python scripts/fetch_tournaments.py
 
       - name: Validate tournament JSON
@@ -54,7 +58,14 @@ jobs:
               assert row.get("name") and row.get("date"), f"Missing name/date: {row}"
               event_date = date.fromisoformat(row["date"])
               assert today <= event_date <= limit, f"Out-of-range event: {row['name']} ({row['date']})"
+              deadline = row.get("officialDeadline")
+              if deadline:
+                  deadline_date = date.fromisoformat(deadline)
+                  assert deadline_date <= event_date, f"Deadline after event: {row['name']} ({deadline})"
+              if row.get("deadlineSourceType") == "primary_document":
+                  assert row.get("deadlineSourceUrl"), f"Missing source for verified deadline: {row['name']}"
           print(f"Validated {len(rows)} upcoming tournament records")
+          print(f"Deadlines requiring confirmation: {sum(not x.get('officialDeadline') for x in rows)}")
           PY
 
       - name: Commit updated data
