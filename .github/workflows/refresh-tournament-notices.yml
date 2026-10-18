@@ -1,0 +1,81 @@
+name: Refresh tournament notices
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 18 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/refresh-tournament-notices.yml"
+      - "scripts/fetch_tournaments.py"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch official tournament information
+        run: python scripts/fetch_tournaments.py
+
+      - name: Validate tournament JSON
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import date, timedelta
+          from pathlib import Path
+
+          path = Path("data/tournaments.json")
+          rows = json.loads(path.read_text(encoding="utf-8"))
+          assert isinstance(rows, list) and rows, "No tournament records were fetched"
+          today = date.today()
+          limit = today + timedelta(days=366)
+          for row in rows:
+              assert row.get("name") and row.get("date"), f"Missing name/date: {row}"
+              event_date = date.fromisoformat(row["date"])
+              assert today <= event_date <= limit, f"Out-of-range event: {row['name']} ({row['date']})"
+          print(f"Validated {len(rows)} upcoming tournament records")
+          PY
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tournaments.json
+          if git diff --cached --quiet; then
+            echo "Tournament data is already up to date."
+          else
+            git commit -m "Update tournament notices"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./"
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
