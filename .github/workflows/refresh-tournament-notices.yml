@@ -61,7 +61,7 @@ jobs:
               deadline = row.get("officialDeadline")
               if deadline:
                   deadline_date = date.fromisoformat(deadline)
-                  assert deadline_date <= event_date, f"Deadline after event: {row['name']} ({deadline})"
+                  assert deadline_date < event_date, f"Deadline is not before event: {row['name']} ({deadline})"
               if row.get("deadlineSourceType") == "primary_document":
                   assert row.get("deadlineSourceUrl"), f"Missing source for verified deadline: {row['name']}"
           print(f"Validated {len(rows)} upcoming tournament records")
