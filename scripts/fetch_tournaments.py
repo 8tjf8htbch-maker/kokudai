@@ -178,6 +178,9 @@ def parse_detail(url):
     # First try the official event page's explicit application field.
     deadline_text = after_label(lines, "事前申込")
     deadline = iso_date(deadline_text)
+    # A date on or after the event is likely an event/reception date, not an advance application deadline.
+    if deadline and event_date and deadline >= event_date:
+        deadline = None
     deadline_source_url = url if deadline else ""
     deadline_source_type = "official_page" if deadline else "not_found"
 
