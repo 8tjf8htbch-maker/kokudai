@@ -1,33 +1,5 @@
 [
   {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202610-19311",
-    "seriesId": "全国競技かるた松山大会",
-    "name": "第56回全国競技かるた松山大会",
-    "date": "2026-10-25",
-    "venue": "愛媛県生活文化センター 3階大広間 他",
-    "prefecture": "愛媛県",
-    "ranks": [
-      "D",
-      "E"
-    ],
-    "officialDeadline": "2026-09-27",
-    "kokudaiDeadline": "2026-09-20",
-    "deadlineSourceUrl": "https://www.karuta.or.jp/cup-info/202610/19311/",
-    "deadlineSourceType": "official_page",
-    "documents": [
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第56回全国競技かるた松山大会DE級②ご案内.docx"
-      },
-      {
-        "label": "参加申込書",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/09/第56回全国競技かるた松山大会DE級②申込書.xlsx"
-      }
-    ],
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202610/19311/",
-    "fetchedAt": "2026-10-25T20:55:43.447330+00:00"
-  },
-  {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19499",
     "seriesId": "全国小・中学生競技かるた選手権福井大会",
     "name": "第49回全国小・中学生競技かるた選手権福井大会",
@@ -54,7 +26,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19499/",
-    "fetchedAt": "2026-10-25T20:55:43.260960+00:00"
+    "fetchedAt": "2026-10-26T22:44:03.485080+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19371",
@@ -83,7 +55,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19371/",
-    "fetchedAt": "2026-10-25T20:55:43.065106+00:00"
+    "fetchedAt": "2026-10-26T22:44:03.231151+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19495",
@@ -110,7 +82,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19495/",
-    "fetchedAt": "2026-10-25T20:55:42.496438+00:00"
+    "fetchedAt": "2026-10-26T22:44:02.447720+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19375",
@@ -133,7 +105,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19375/",
-    "fetchedAt": "2026-10-25T20:55:42.683595+00:00"
+    "fetchedAt": "2026-10-26T22:44:02.700625+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19468",
@@ -161,7 +133,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19468/",
-    "fetchedAt": "2026-10-25T20:55:42.871322+00:00"
+    "fetchedAt": "2026-10-26T22:44:02.956316+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19492",
@@ -187,7 +159,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19492/",
-    "fetchedAt": "2026-10-25T20:55:42.307966+00:00"
+    "fetchedAt": "2026-10-26T22:44:02.182954+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19318",
@@ -215,7 +187,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19318/",
-    "fetchedAt": "2026-10-25T20:55:41.744499+00:00"
+    "fetchedAt": "2026-10-26T22:44:01.381363+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19367",
@@ -246,7 +218,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19367/",
-    "fetchedAt": "2026-10-25T20:55:41.931590+00:00"
+    "fetchedAt": "2026-10-26T22:44:01.636323+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19462",
@@ -283,7 +255,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19462/",
-    "fetchedAt": "2026-10-25T20:55:42.120909+00:00"
+    "fetchedAt": "2026-10-26T22:44:01.890517+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19553",
@@ -307,7 +279,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19553/",
-    "fetchedAt": "2026-10-25T20:55:40.923179+00:00"
+    "fetchedAt": "2026-10-26T22:44:00.236283+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19545",
@@ -335,7 +307,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19545/",
-    "fetchedAt": "2026-10-25T20:55:41.555846+00:00"
+    "fetchedAt": "2026-10-26T22:44:01.131169+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19556",
@@ -359,7 +331,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19556/",
-    "fetchedAt": "2026-10-25T20:55:40.550503+00:00"
+    "fetchedAt": "2026-10-26T22:43:59.722274+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19486",
@@ -387,7 +359,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19486/",
-    "fetchedAt": "2026-10-25T20:55:40.179533+00:00"
+    "fetchedAt": "2026-10-26T22:43:59.207379+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19490",
@@ -415,7 +387,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19490/",
-    "fetchedAt": "2026-10-25T20:55:38.773982+00:00"
+    "fetchedAt": "2026-10-26T22:43:57.115395+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19716",
@@ -443,7 +415,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19716/",
-    "fetchedAt": "2026-10-25T20:55:38.963526+00:00"
+    "fetchedAt": "2026-10-26T22:43:57.373892+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19548",
@@ -471,7 +443,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19548/",
-    "fetchedAt": "2026-10-25T20:55:39.317425+00:00"
+    "fetchedAt": "2026-10-26T22:43:58.043389+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19537",
@@ -499,7 +471,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19537/",
-    "fetchedAt": "2026-10-25T20:55:39.984188+00:00"
+    "fetchedAt": "2026-10-26T22:43:58.957772+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19727",
@@ -522,7 +494,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19727/",
-    "fetchedAt": "2026-10-25T20:55:38.393453+00:00"
+    "fetchedAt": "2026-10-26T22:43:56.612319+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19783",
@@ -549,7 +521,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19783/",
-    "fetchedAt": "2026-10-25T20:55:38.584671+00:00"
+    "fetchedAt": "2026-10-26T22:43:56.865966+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19730",
@@ -572,7 +544,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19730/",
-    "fetchedAt": "2026-10-25T20:55:37.826571+00:00"
+    "fetchedAt": "2026-10-26T22:43:55.844736+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19558",
@@ -595,7 +567,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19558/",
-    "fetchedAt": "2026-10-25T20:55:38.201925+00:00"
+    "fetchedAt": "2026-10-26T22:43:56.362575+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19757",
@@ -622,7 +594,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19757/",
-    "fetchedAt": "2026-10-25T20:55:36.867879+00:00"
+    "fetchedAt": "2026-10-26T22:43:54.509669+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19541",
@@ -649,7 +621,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19541/",
-    "fetchedAt": "2026-10-25T20:55:37.632737+00:00"
+    "fetchedAt": "2026-10-26T22:43:55.591753+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19720",
@@ -678,7 +650,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19720/",
-    "fetchedAt": "2026-10-25T20:55:36.680013+00:00"
+    "fetchedAt": "2026-10-26T22:43:54.247631+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19725",
@@ -706,7 +678,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19725/",
-    "fetchedAt": "2026-10-25T20:55:36.352236+00:00"
+    "fetchedAt": "2026-10-26T22:43:53.793176+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202702-19753",
@@ -731,6 +703,6 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202702/19753/",
-    "fetchedAt": "2026-10-25T20:55:35.895655+00:00"
+    "fetchedAt": "2026-10-26T22:43:53.156514+00:00"
   }
 ]
