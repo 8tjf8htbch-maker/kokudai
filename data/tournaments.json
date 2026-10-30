@@ -1,34 +1,5 @@
 [
   {
-    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19499",
-    "seriesId": "全国小・中学生競技かるた選手権福井大会",
-    "name": "第49回全国小・中学生競技かるた選手権福井大会",
-    "date": "2026-11-01",
-    "venue": "坂井市春江西コミュニティセンター",
-    "prefecture": "",
-    "ranks": [],
-    "officialDeadline": "2026-10-18",
-    "kokudaiDeadline": "2026-10-11",
-    "deadlineSourceUrl": "https://www.karuta.or.jp/cup-info/202611/19499/",
-    "deadlineSourceType": "official_page",
-    "documents": [
-      {
-        "label": "大会情報案内",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/大会案内.doc"
-      },
-      {
-        "label": "参加申込書",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/参加申込書.xlsx"
-      },
-      {
-        "label": "春江西コミュニティセンター地図",
-        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/春江西コミセン地図.xlsx"
-      }
-    ],
-    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19499/",
-    "fetchedAt": "2026-10-29T22:49:42.349106+00:00"
-  },
-  {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19371",
     "seriesId": "全国競技かるた札幌大会",
     "name": "第7回全国競技かるた札幌大会",
@@ -55,7 +26,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19371/",
-    "fetchedAt": "2026-10-29T22:49:42.158317+00:00"
+    "fetchedAt": "2026-10-30T22:26:15.585956+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19495",
@@ -82,7 +53,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19495/",
-    "fetchedAt": "2026-10-29T22:49:41.569275+00:00"
+    "fetchedAt": "2026-10-30T22:26:15.000262+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19375",
@@ -105,7 +76,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19375/",
-    "fetchedAt": "2026-10-29T22:49:41.763566+00:00"
+    "fetchedAt": "2026-10-30T22:26:15.198604+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19468",
@@ -133,7 +104,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19468/",
-    "fetchedAt": "2026-10-29T22:49:41.956251+00:00"
+    "fetchedAt": "2026-10-30T22:26:15.392691+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19492",
@@ -159,7 +130,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19492/",
-    "fetchedAt": "2026-10-29T22:49:41.374576+00:00"
+    "fetchedAt": "2026-10-30T22:26:14.807407+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19318",
@@ -187,7 +158,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19318/",
-    "fetchedAt": "2026-10-29T22:49:40.790427+00:00"
+    "fetchedAt": "2026-10-30T22:26:14.226458+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19367",
@@ -218,7 +189,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19367/",
-    "fetchedAt": "2026-10-29T22:49:40.982562+00:00"
+    "fetchedAt": "2026-10-30T22:26:14.417181+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19462",
@@ -255,7 +226,28 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19462/",
-    "fetchedAt": "2026-10-29T22:49:41.182937+00:00"
+    "fetchedAt": "2026-10-30T22:26:14.614133+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19836",
+    "seriesId": "小倉百人一首競技かるた第73期名人位・第71期クイーン位挑戦者決定戦",
+    "name": "小倉百人一首競技かるた第73期名人位・第71期クイーン位挑戦者決定戦",
+    "date": "2026-11-22",
+    "venue": "文京区立かるた記念大塚会館",
+    "prefecture": "",
+    "ranks": [],
+    "officialDeadline": null,
+    "kokudaiDeadline": null,
+    "deadlineSourceUrl": null,
+    "deadlineSourceType": "not_found",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/261122第73期名人位・第71期クイーン位挑戦者決定戦案内.docx"
+      }
+    ],
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19836/",
+    "fetchedAt": "2026-10-30T22:26:12.977883+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19553",
@@ -279,7 +271,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19553/",
-    "fetchedAt": "2026-10-29T22:49:39.947786+00:00"
+    "fetchedAt": "2026-10-30T22:26:13.378004+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19545",
@@ -307,7 +299,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19545/",
-    "fetchedAt": "2026-10-29T22:49:40.596999+00:00"
+    "fetchedAt": "2026-10-30T22:26:14.029390+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19556",
@@ -331,7 +323,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19556/",
-    "fetchedAt": "2026-10-29T22:49:39.546243+00:00"
+    "fetchedAt": "2026-10-30T22:26:12.648158+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19486",
@@ -359,7 +351,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19486/",
-    "fetchedAt": "2026-10-29T22:49:39.152030+00:00"
+    "fetchedAt": "2026-10-30T22:26:12.251311+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19490",
@@ -387,7 +379,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19490/",
-    "fetchedAt": "2026-10-29T22:49:37.494077+00:00"
+    "fetchedAt": "2026-10-30T22:26:10.596875+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19716",
@@ -415,7 +407,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19716/",
-    "fetchedAt": "2026-10-29T22:49:37.693566+00:00"
+    "fetchedAt": "2026-10-30T22:26:10.792808+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19548",
@@ -443,7 +435,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19548/",
-    "fetchedAt": "2026-10-29T22:49:38.181397+00:00"
+    "fetchedAt": "2026-10-30T22:26:11.321922+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202611-19537",
@@ -471,7 +463,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202611/19537/",
-    "fetchedAt": "2026-10-29T22:49:38.955634+00:00"
+    "fetchedAt": "2026-10-30T22:26:12.051296+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19727",
@@ -494,7 +486,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19727/",
-    "fetchedAt": "2026-10-29T22:49:37.101999+00:00"
+    "fetchedAt": "2026-10-30T22:26:10.207417+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19783",
@@ -521,7 +513,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19783/",
-    "fetchedAt": "2026-10-29T22:49:37.296528+00:00"
+    "fetchedAt": "2026-10-30T22:26:10.402286+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19730",
@@ -544,7 +536,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19730/",
-    "fetchedAt": "2026-10-29T22:49:36.514205+00:00"
+    "fetchedAt": "2026-10-30T22:26:09.608722+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19558",
@@ -567,7 +559,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19558/",
-    "fetchedAt": "2026-10-29T22:49:36.909177+00:00"
+    "fetchedAt": "2026-10-30T22:26:10.012262+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19757",
@@ -594,7 +586,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19757/",
-    "fetchedAt": "2026-10-29T22:49:35.493771+00:00"
+    "fetchedAt": "2026-10-30T22:26:08.411336+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19541",
@@ -621,7 +613,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19541/",
-    "fetchedAt": "2026-10-29T22:49:36.321446+00:00"
+    "fetchedAt": "2026-10-30T22:26:09.413590+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19720",
@@ -650,7 +642,7 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19720/",
-    "fetchedAt": "2026-10-29T22:49:35.299326+00:00"
+    "fetchedAt": "2026-10-30T22:26:08.210133+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202612-19725",
@@ -678,7 +670,115 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202612/19725/",
-    "fetchedAt": "2026-10-29T22:49:34.953145+00:00"
+    "fetchedAt": "2026-10-30T22:26:07.740843+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202701-19829",
+    "seriesId": "小倉百人一首競技かるた新春全国大会",
+    "name": "小倉百人一首競技かるた第72回新春全国大会",
+    "date": "2027-01-09",
+    "venue": "ひがしんアリーナ",
+    "prefecture": "",
+    "ranks": [
+      "D"
+    ],
+    "officialDeadline": "2026-12-07",
+    "kokudaiDeadline": "2026-11-30",
+    "deadlineSourceUrl": "https://www.karuta.or.jp/cup-info/202701/19829/",
+    "deadlineSourceType": "official_page",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/新春大会案内-27.01.pdf"
+      },
+      {
+        "label": "参加申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/○○会・新春大会申込書-27.01.xlsx"
+      }
+    ],
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202701/19829/",
+    "fetchedAt": "2026-10-30T22:26:07.272607+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202701-19831",
+    "seriesId": "小倉百人一首競技かるた新春全国大会",
+    "name": "小倉百人一首競技かるた第72回新春全国大会",
+    "date": "2027-01-10",
+    "venue": "ひがしんアリーナ",
+    "prefecture": "",
+    "ranks": [
+      "E"
+    ],
+    "officialDeadline": "2026-12-07",
+    "kokudaiDeadline": "2026-11-30",
+    "deadlineSourceUrl": "https://www.karuta.or.jp/cup-info/202701/19831/",
+    "deadlineSourceType": "official_page",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/新春大会案内-27.01.pdf"
+      },
+      {
+        "label": "参加申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/○○会・新春大会申込書-27.01.xlsx"
+      }
+    ],
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202701/19831/",
+    "fetchedAt": "2026-10-30T22:26:07.076030+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202701-19827",
+    "seriesId": "小倉百人一首競技かるた新春全国大会",
+    "name": "小倉百人一首競技かるた第72回新春全国大会",
+    "date": "2027-01-23",
+    "venue": "東京武道館",
+    "prefecture": "",
+    "ranks": [
+      "B"
+    ],
+    "officialDeadline": "2026-12-07",
+    "kokudaiDeadline": "2026-11-30",
+    "deadlineSourceUrl": "https://www.karuta.or.jp/cup-info/202701/19827/",
+    "deadlineSourceType": "official_page",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/新春大会案内-27.01.pdf"
+      },
+      {
+        "label": "参加申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/○○会・新春大会申込書-27.01.xlsx"
+      }
+    ],
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202701/19827/",
+    "fetchedAt": "2026-10-30T22:26:06.876354+00:00"
+  },
+  {
+    "id": "karuta-https-www-karuta-or-jp-cup-info-202701-19823",
+    "seriesId": "小倉百人一首競技かるた新春全国大会",
+    "name": "小倉百人一首競技かるた第72回新春全国大会",
+    "date": "2027-01-31",
+    "venue": "文京スポーツセンター",
+    "prefecture": "",
+    "ranks": [
+      "A"
+    ],
+    "officialDeadline": "2026-12-07",
+    "kokudaiDeadline": "2026-11-30",
+    "deadlineSourceUrl": "https://www.karuta.or.jp/cup-info/202701/19823/",
+    "deadlineSourceType": "official_page",
+    "documents": [
+      {
+        "label": "大会情報案内",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/新春大会案内-27.01.pdf"
+      },
+      {
+        "label": "参加申込書",
+        "url": "https://www.karuta.or.jp/wp/wp-content/uploads/2026/10/○○会・新春大会申込書-27.01.xlsx"
+      }
+    ],
+    "sourceUrl": "https://www.karuta.or.jp/cup-info/202701/19823/",
+    "fetchedAt": "2026-10-30T22:26:06.675178+00:00"
   },
   {
     "id": "karuta-https-www-karuta-or-jp-cup-info-202702-19753",
@@ -703,6 +803,6 @@
       }
     ],
     "sourceUrl": "https://www.karuta.or.jp/cup-info/202702/19753/",
-    "fetchedAt": "2026-10-29T22:49:34.489205+00:00"
+    "fetchedAt": "2026-10-30T22:26:06.478140+00:00"
   }
 ]
